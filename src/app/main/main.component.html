@@ -1,0 +1,17 @@
+<div class="container" *ngIf="!service.result">
+  Loading...
+</div>
+<div class="container" *ngIf="service.result">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4" *ngFor="let myCard of service.cardArray; let myIndex=index">
+      <app-swcard [myCard]="myCard"></app-swcard>
+    </div>
+  </div>
+
+  <button type="button" class="btn btn-primary" (click)="downloadMore()" [disabled]="service.result.next === null">Next</button>
+
+</div>
+
+<p>
+  {{service.result | json}}
+</p>

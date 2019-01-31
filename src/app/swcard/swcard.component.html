@@ -1,0 +1,10 @@
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">Page {{myIndex}}</h4>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item" *ngFor="let character of myCard">
+      <b>{{character.name}}</b> Height: {{character.height}}
+    </li>
+  </ul>
+</div>
